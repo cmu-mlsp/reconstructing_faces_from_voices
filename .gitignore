@@ -1,8 +1,6 @@
-# data
+# data 
 data/fbank/
 data/VGG_ALL_FRONTAL/
-models/generator.pth
-models/face_embedding.pth
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
