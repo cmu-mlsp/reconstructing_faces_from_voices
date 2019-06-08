@@ -1,6 +1,6 @@
 # data
-data/fbank
-data/VGG_ALL_FRONTAL
+data/fbank/
+data/VGG_ALL_FRONTAL/
 models/generator.pth
 models/face_embedding.pth
 
