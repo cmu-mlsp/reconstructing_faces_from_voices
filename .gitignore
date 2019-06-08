@@ -1,3 +1,8 @@
+# data
+data/
+models/generator.pth
+models/face_embedding.pth
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
