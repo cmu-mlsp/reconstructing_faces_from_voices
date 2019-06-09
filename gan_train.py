@@ -58,7 +58,7 @@ GD_fake = Meter('G_D_fake', 'avg', ':3.2f')
 GC_fake = Meter('G_C_fake', 'avg', ':3.2f')
 
 print('Training models...')
-for it in range(100000):
+for it in range(30000):
     # data
     start_time = time.time()
     
@@ -89,8 +89,8 @@ for it in range(100000):
     real_score_out = d_net(f_net(face))
     fake_score_out = d_net(f_net(fake.detach()))
     real_label_out = c_net(f_net(face))
-    D_real_loss = F.binary_cross_entropy(F.sigmoid(real_score_out), real_label)
-    D_fake_loss = F.binary_cross_entropy(F.sigmoid(fake_score_out), fake_label)
+    D_real_loss = F.binary_cross_entropy(torch.sigmoid(real_score_out), real_label)
+    D_fake_loss = F.binary_cross_entropy(torch.sigmoid(fake_score_out), fake_label)
     C_real_loss = F.nll_loss(F.log_softmax(real_label_out, 1), face_label)
     D_real.update(D_real_loss.item())
     D_fake.update(D_fake_loss.item())
@@ -114,7 +114,7 @@ for it in range(100000):
     batch_time.update(time.time() - start_time)
 
     # print status
-    if it % 50 == 0:
+    if it % 200 == 0:
         print(iteration, data_time, batch_time, 
               D_real, D_fake, C_real, GD_fake, GC_fake)
         data_time.reset()

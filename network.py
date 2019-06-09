@@ -7,7 +7,6 @@ import torch.nn.functional as F
 class VoiceEmbedNet(nn.Module):
     def __init__(self, input_channel, channels, output_channel):
         super(VoiceEmbedNet, self).__init__()
-        print('c of voice embednet:', channels)
         self.model = nn.Sequential(
             nn.Conv1d(input_channel, channels[0], 3, 2, 1, bias=False),
             nn.BatchNorm1d(channels[0], affine=True),
@@ -33,7 +32,6 @@ class VoiceEmbedNet(nn.Module):
 class Generator(nn.Module):
     def __init__(self, input_channel, channels, output_channel):
         super(Generator, self).__init__()
-        print('c of generator:', channels)
         self.model = nn.Sequential(
             nn.ConvTranspose2d(input_channel, channels[0], 4, 1, 0, bias=True),
             nn.ReLU(inplace=True),
@@ -54,7 +52,6 @@ class Generator(nn.Module):
 class FaceEmbedNet(nn.Module):
     def __init__(self, input_channel, channels, output_channel):
         super(FaceEmbedNet, self).__init__()
-        print('chnl of embedding network:', channels)
         self.model = nn.Sequential(
             nn.Conv2d(input_channel, channels[0], 1, 1, 0, bias=True),
             nn.LeakyReLU(0.2, inplace=True),

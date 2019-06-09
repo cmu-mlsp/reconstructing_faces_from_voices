@@ -1,3 +1,8 @@
+""" This code is from 
+       https://github.com/skerit/cmusphinx/blob/master/SphinxTrain/python/cmusphinx/mfcc.py
+    We fix some bugs and modify the pre-emphasis
+""" 
+
 # Copyright (c) 2006 Carnegie Mellon University
 #
 # You may copy and modify this freely under the same terms as
@@ -13,9 +18,6 @@ system.
 __author__ = "David Huggins-Daines <dhuggins@cs.cmu.edu>"
 __version__ = "$Revision$"
 
-""" This code is from https://github.com/skerit/cmusphinx/blob/master/SphinxTrain/python/cmusphinx/mfcc.py
-    We fix some bugs and modify the pre-emphasis
-""" 
 
 
 import numpy, numpy.fft

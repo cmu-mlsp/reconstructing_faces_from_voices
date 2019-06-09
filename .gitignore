@@ -1,6 +1,8 @@
 # data 
 data/fbank/
 data/VGG_ALL_FRONTAL/
+data/*zip
+data/*tar
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

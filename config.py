@@ -38,16 +38,14 @@ NETWORKS_PARAMETERS = {
         'channels': [256, 384, 576, 864],
         'output_channel': 64, # the embedding dimension
         'model_path': 'models/voice_embedding.pth',
-        #'train': False
     },
     # GENERATOR (g)
     'g': {
         'network': Generator,
         'input_channel': 64,
-        'channels': [1024, 512, 256, 128, 64], # deconvolutional layer
+        'channels': [1024, 512, 256, 128, 64], # channels for deconvolutional layers
         'output_channel': 3, # images with RGB channels
         'model_path': 'models/generator.pth',
-        #'train': True
     },
     # FACE EMBEDDING NETWORK (f)
     'f': {
@@ -56,7 +54,6 @@ NETWORKS_PARAMETERS = {
         'channels': [32, 64, 128, 256, 512],
         'output_channel': 64,
         'model_path': 'models/face_embedding.pth',
-        #'train': True
     },
     # DISCRIMINATOR (d)
     'd': {
@@ -65,7 +62,6 @@ NETWORKS_PARAMETERS = {
         'channels': [],
         'output_channel': 1,
         'model_path': 'models/discriminator.pth',
-        #'train': True
     },
     # CLASSIFIER (c)
     'c': {
@@ -74,13 +70,12 @@ NETWORKS_PARAMETERS = {
         'channels': [],
         'output_channel': -1, # This parameter is depended on the dataset we used
         'model_path': 'models/classifier.pth',
-        #'train': True
     },
     # OPTIMIZER PARAMETERS 
     'lr': 0.0002,
     'beta1': 0.5,
     'beta2': 0.999,
 
-    # MODE
-    'GPU': True
+    # MODE, use GPU or not
+    'GPU': True,
 }
