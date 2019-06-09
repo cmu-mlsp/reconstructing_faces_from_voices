@@ -38,12 +38,12 @@ python gan_test.py
 The results are in the folder of *data/test_data/*
 ## Citation
 
-@article{wen2019reconstructing,
-  title={Reconstructing faces from voices},
-  author={Yandong Wen, Rita Singh, Bhiksha Raj},
-  journal={arXiv preprint arXiv:1905.10604},
-  year={2019}
-}
+	@article{wen2019reconstructing,
+	  title={Reconstructing faces from voices},
+	  author={Yandong Wen, Rita Singh, Bhiksha Raj},
+	  journal={arXiv preprint arXiv:1905.10604},
+	  year={2019}
+	}
 ## License 
 
 @TODO: add license
