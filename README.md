@@ -16,6 +16,7 @@ $ conda create --name voice2face --file requirements.txt
 
 ## Processed data
 Voice data (log mel-spectrograms): [google drive](https://drive.google.com/open?id=1T5Mv_7FC2ZfrjQu17Rn9E24IOgdii4tj)
+
 Face data (aligned face images): [google drive](https://drive.google.com/open?id=1qmxGwW5_lNQbTqwW81yPObJ-S-n3rpXp)
 
 ### Configurations 
