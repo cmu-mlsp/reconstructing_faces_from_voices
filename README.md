@@ -1,6 +1,11 @@
 # Reconstructing faces from voices
+By Yandong Wen, Rita Singh, and Bhiksha Raj
 
-Implementation of *Reconstructing faces from voices* paper 
+Implementation of [Reconstructing faces from voices](https://arxiv.org/abs/1905.10604) paper 
+
+	Yandong Wen, Rita Singh, Bhiksha, Raj
+	Machine Learning for Signal Processing Group
+	Carnegie Mellon University
 
 [https://arxiv.org/abs/1905.10604](https://arxiv.org/abs/1905.10604)
 
