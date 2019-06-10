@@ -1,8 +1,10 @@
 # data 
 data/fbank/
 data/VGG_ALL_FRONTAL/
+data/test_data/
 data/*zip
 data/*tar
+models/*.pth
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

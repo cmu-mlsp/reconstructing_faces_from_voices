@@ -1,9 +1,7 @@
 import os
 import time
 import torch
-import string
 import torch.nn.functional as F
-import torch.optim as optim
 
 from torch.utils.data import DataLoader
 from config import DATASET_PARAMETERS, NETWORKS_PARAMETERS
@@ -58,7 +56,7 @@ GD_fake = Meter('G_D_fake', 'avg', ':3.2f')
 GC_fake = Meter('G_C_fake', 'avg', ':3.2f')
 
 print('Training models...')
-for it in range(30000):
+for it in range(50000):
     # data
     start_time = time.time()
     
@@ -104,7 +102,7 @@ for it in range(30000):
     g_optimizer.zero_grad()
     fake_score_out = d_net(f_net(fake))
     fake_label_out = c_net(f_net(fake))
-    GD_fake_loss = F.binary_cross_entropy(F.sigmoid(fake_score_out), real_label)
+    GD_fake_loss = F.binary_cross_entropy(torch.sigmoid(fake_score_out), real_label)
     GC_fake_loss = F.nll_loss(F.log_softmax(fake_label_out, 1), voice_label)
     (GD_fake_loss + GC_fake_loss).backward()
     GD_fake.update(GD_fake_loss.item())
@@ -127,6 +125,5 @@ for it in range(30000):
 
         # snapshot
         save_model(g_net, NETWORKS_PARAMETERS['g']['model_path'])
-        save_model(f_net, NETWORKS_PARAMETERS['f']['model_path'])
     iteration.update(1)
 

@@ -3,7 +3,6 @@ from dataset import VoiceDataset, FaceDataset
 from network import VoiceEmbedNet, Generator, FaceEmbedNet, Classifier
 from utils import get_collate_fn
 
-
 DATASET_PARAMETERS = {
     # meta data provided by voxceleb1 dataset
     'meta_file': 'data/vox1_meta.csv',
@@ -37,7 +36,7 @@ NETWORKS_PARAMETERS = {
         'input_channel': 64,
         'channels': [256, 384, 576, 864],
         'output_channel': 64, # the embedding dimension
-        'model_path': 'models/voice_embedding.pth',
+        'model_path': 'pretrained_models/voice_embedding.pth',
     },
     # GENERATOR (g)
     'g': {

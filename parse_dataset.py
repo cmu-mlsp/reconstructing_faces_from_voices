@@ -1,11 +1,4 @@
 import os
-import random
-import numpy as np
-
-from PIL import Image
-from os.path import basename, dirname
-from torch.utils.data import Dataset
-from torch.utils.data.dataloader import default_collate
 
 def parse_metafile(meta_file):
     with open(meta_file, 'r') as f:

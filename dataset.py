@@ -1,11 +1,7 @@
-import os
-import random
 import numpy as np
 
 from PIL import Image
-from os.path import basename, dirname
 from torch.utils.data import Dataset
-from torch.utils.data.dataloader import default_collate
 
 def load_voice(voice_item):
     voice_data = np.load(voice_item['filepath'])
