@@ -47,4 +47,4 @@ The results are in the folder of *data/test_data/*
 	}
 ## License 
 
-@TODO: add license
+Check LICENSE.md. 
