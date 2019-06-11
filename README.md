@@ -71,7 +71,7 @@ The file names of the voices and faces starting with A-E are validation or testi
 
 ## Contribution
 
-We welcome contributions from everyone and always working to make it better. Please give us a pull request or raise an issue and we wil be glad to respond. 
+We welcome contributions from everyone and always working to make it better. Please give us a pull request or raise an issue and we will be happy to help. 
 
 ## License 
 
