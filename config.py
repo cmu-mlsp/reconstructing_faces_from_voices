@@ -26,6 +26,9 @@ DATASET_PARAMETERS = {
     'nframe_range': [300, 800],
     'workers_num': 1,
     'collate_fn': get_collate_fn,
+
+    # test data
+    'test_data': 'data/test_data/'
 }
 
 

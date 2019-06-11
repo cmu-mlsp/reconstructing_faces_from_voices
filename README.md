@@ -49,15 +49,15 @@ The trained model is `models/generator.pth`
 ## Test
 
 We provide some examples of generated faces (in `data/example_data/`) using the model in `pretrained_model/`.
-If you want to generate faces for your own voice recording, specify the `test_data` and `model_path` of generator variables in `config.py` and run:
+If you want to generate faces for your own voice recordings using the trained model, specify the *test_data* (as the folder containing voice recordings) and *model_path* (as the path of the generator) variables in `config.py` and run:
 
 ```
 $ python gan_test.py
 ``` 
 
-Results will be in `data/test_data/`. For each voice recording named `<filename>.wav`, we generate a face image named `<filename>.png`.
+Results will be in *test_data* folder. For each voice recording named `<filename>.wav`, we generate a face image named `<filename>.png`.
 
-The file names of the voices and faces starting with A-E are validation or testing set, while those starting with F-Z are training set.
+**Note:** Now we only support the voice recording with one channel at 16K sample rate. The file names of the voices and faces starting with A-E are validation or testing set, while those starting with F-Z are training set.
 
 ## Citation
 
