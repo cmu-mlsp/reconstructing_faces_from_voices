@@ -23,6 +23,8 @@ After you run the above script, you need to activate the environment where all t
 $ source activate voice2face
 ```
 
+**NOTE:** If you get an error complaining about "webrtcvad" not being found, then you need to make sure the pip in your PATH is the one found inside your environment. This could happen if you have multiple installations of pip (inside/outside environment).
+
 ## Processed data
 
 The following are the **processed** training data we used for this paper. Please feel free to download them.
@@ -33,7 +35,7 @@ Face data (aligned face images): [google drive](https://drive.google.com/open?id
 
 Once downloaded, update variables `voice_dir` and `face_dir` with the corresponding paths.
 
-### Configurations 
+## Configurations 
 
 See `config.py` on how to change configurations. 
 
@@ -45,13 +47,16 @@ $ python gan_train.py
 The trained model is `models/generator.pth`
 
 ## Test
+
 We provide some examples of generated faces (in `data/example_data/`) using the model in `pretrained_model/`.
-If you want to generate faces for your own voice recording, specify the *test_data* and *model_path* of generator variables in `config.py` and run
+If you want to generate faces for your own voice recording, specify the `test_data` and `model_path` of generator variables in `config.py` and run:
+
 ```
 $ python gan_test.py
 ``` 
 
-Results will be in `data/test_data/`. For each voice recording named `xxx.wav`, we generate a face image named `xxx.png`.
+Results will be in `data/test_data/`. For each voice recording named `<filename>.wav`, we generate a face image named `<filename>.png`.
+
 The file names of the voices and faces starting with A-E are validation or testing set, while those starting with F-Z are training set.
 
 ## Citation
@@ -63,7 +68,11 @@ The file names of the voices and faces starting with A-E are validation or testi
 	  year={2019}
 	}
 
+
+## Contribution
+
+We welcome contributions from everyone and always working to make it better. Please give us a pull request or raise an issue and we wil be glad to respond. 
+
 ## License 
 
-Check LICENSE.md. 
-
+This repository is licensed under GNU GPL-3.0. Please refer to [LICENSE.md](LICENSE.md). 
