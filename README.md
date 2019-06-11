@@ -1,8 +1,10 @@
 # Reconstructing faces from voices
 
 ##### Implementation of [Reconstructing faces from voices](https://arxiv.org/abs/1905.10604) paper 
-Yandong Wen, Rita Singh, and Bhiksha Raj \s
-Machine Learning for Signal Processing Group \s
+Yandong Wen, Rita Singh, and Bhiksha Raj
+
+Machine Learning for Signal Processing Group
+
 Carnegie Mellon University
 
 ## Requirements
@@ -23,10 +25,13 @@ $ source activate voice2face
 
 ## Processed data
 
-The following are the **processed** training data we used for this paper. Please feel free to download them. \s
-Voice data (log mel-spectrograms): [google drive](https://drive.google.com/open?id=1T5Mv_7FC2ZfrjQu17Rn9E24IOgdii4tj) \s
-Face data (aligned face images): [google drive](https://drive.google.com/open?id=1qmxGwW5_lNQbTqwW81yPObJ-S-n3rpXp) \s
-Once downloaded, update variables `voice_dir` and `face_dir` with the corresponding paths. \s
+The following are the **processed** training data we used for this paper. Please feel free to download them.
+
+Voice data (log mel-spectrograms): [google drive](https://drive.google.com/open?id=1T5Mv_7FC2ZfrjQu17Rn9E24IOgdii4tj)
+
+Face data (aligned face images): [google drive](https://drive.google.com/open?id=1qmxGwW5_lNQbTqwW81yPObJ-S-n3rpXp)
+
+Once downloaded, update variables `voice_dir` and `face_dir` with the corresponding paths.
 
 ### Configurations 
 
