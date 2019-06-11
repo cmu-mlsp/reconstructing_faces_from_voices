@@ -1,13 +1,9 @@
 # Reconstructing faces from voices
-By Yandong Wen, Rita Singh, and Bhiksha Raj
 
-Implementation of [Reconstructing faces from voices](https://arxiv.org/abs/1905.10604) paper 
-
-	Yandong Wen, Rita Singh, Bhiksha, Raj
-	Machine Learning for Signal Processing Group
-	Carnegie Mellon University
-
-[https://arxiv.org/abs/1905.10604](https://arxiv.org/abs/1905.10604)
+##### Implementation of [Reconstructing faces from voices](https://arxiv.org/abs/1905.10604) paper 
+Yandong Wen, Rita Singh, and Bhiksha Raj
+Machine Learning for Signal Processing Group
+Carnegie Mellon University
 
 ## Requirements
 
@@ -40,19 +36,21 @@ Once downloaded, update variables `voice_dir` and `face_dir` with the correspond
 See `config.py` on how to change configurations. 
 
 ## Train
-
+We provide pretrained models including a voice embedding network and a trained generator in `pretrained_models/`. Or you can train your own generator by running the training script
 ```
 $ python gan_train.py
 ```
-The trained model is in `models/generator.pth`
+The trained model is `models/generator.pth`
 
 ## Test
-
+We provide some examples of generated faces (in `data/example_data/`) using the model in `pretrained_model/`.
+If you want to generate faces for your own voice recording, specify the *test_data* and *model_path* of generator variables in `config.py` and run
 ```
 $ python gan_test.py
 ``` 
 
-Results will be in `data/test_data/`
+Results will be in `data/test_data/`. For each voice recording named `xxx.wav`, we generate a face image named `xxx.png`.
+The file names of the voices and faces starting with A-E are validation or testing set, while those starting with F-Z are training set.
 
 ## Citation
 
@@ -66,3 +64,4 @@ Results will be in `data/test_data/`
 ## License 
 
 Check LICENSE.md. 
+
