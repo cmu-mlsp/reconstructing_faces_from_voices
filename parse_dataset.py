@@ -2,7 +2,7 @@ import os
 
 def parse_metafile(meta_file):
     with open(meta_file, 'r') as f:
-         lines = f.readlines()[1:]
+        lines = f.readlines()[1:]
     celeb_ids = {}
     for line in lines:
         ID, name, _, _, _ = line.rstrip().split('\t')
@@ -35,19 +35,19 @@ def get_dataset_files(data_dir, data_ext, celeb_ids, split):
                 folder = filepath[len(data_dir):].split('/')[1]
                 celeb_name = celeb_ids.get(folder, folder)
                 if celeb_name.startswith(tuple(split)):
-                   data_list.append({'filepath': filepath, 'name': celeb_name})
+                    data_list.append({'filepath': filepath, 'name': celeb_name})
     return data_list
 
 def get_dataset(data_params):
     celeb_ids = parse_metafile(data_params['meta_file'])
     
     voice_list = get_dataset_files(data_params['voice_dir'],
-                                      data_params['voice_ext'],
-                                      celeb_ids,
-                                      data_params['split'])
+                                   data_params['voice_ext'],
+                                   celeb_ids,
+                                   data_params['split'])
     face_list = get_dataset_files(data_params['face_dir'],
-                                     data_params['face_ext'],
-                                     celeb_ids,
-                                     data_params['split'])
+                                  data_params['face_ext'],
+                                  celeb_ids,
+                                  data_params['split'])
     return get_labels(voice_list, face_list)
 
