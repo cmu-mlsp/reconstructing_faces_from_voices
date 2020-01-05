@@ -28,7 +28,7 @@ DATASET_PARAMETERS = {
     'collate_fn': get_collate_fn,
 
     # test data
-    'test_data': 'data/test_data/'
+    'test_data': 'data/example_data/'
 }
 
 
@@ -47,7 +47,7 @@ NETWORKS_PARAMETERS = {
         'input_channel': 64,
         'channels': [1024, 512, 256, 128, 64], # channels for deconvolutional layers
         'output_channel': 3, # images with RGB channels
-        'model_path': 'models/generator.pth',
+        'model_path': 'pretrained_models/generator.pth',
     },
     # FACE EMBEDDING NETWORK (f)
     'f': {
